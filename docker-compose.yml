@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  fenics:
+    image: quay.io/fenicsproject/stable:current
+    volumes:
+      - .:/home/fenics/shared
+    working_dir: /home/fenics/shared
+    tty: true
+

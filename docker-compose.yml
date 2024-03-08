@@ -12,7 +12,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    depends_on:
-      - fenics
     volumes:
       - ./ResultsDir:/app/ResultsDir
+      - ./ProcessResults.py:/app/ProcessResults.py

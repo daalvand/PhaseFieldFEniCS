@@ -1,11 +1,11 @@
-FROM python
+FROM python:3
 
-RUN apt-get update && apt-get install -y ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg xvfb
 
 RUN pip install pyvista
 
 WORKDIR /app
 
-COPY process_results.py .
+COPY ProcessResults.py .
 
-CMD ["python", "process_results.py"]
+CMD ["python", "ProcessResults.py"]

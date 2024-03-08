@@ -7,4 +7,12 @@ services:
       - .:/home/fenics/shared
     working_dir: /home/fenics/shared
     tty: true
-
+  
+  result_processing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - fenics
+    volumes:
+      - ./ResultsDir:/app/ResultsDir
